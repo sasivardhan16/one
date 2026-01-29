@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sum and Average</title>
+</head>
+<body>
+
+<h2>Sum and Average</h2>
+
+Enter numbers (comma separated):<br><br>
+<input type="text" id="numbers" placeholder="e.g. 10,20,30,40">
+<br><br>
+<button onclick="calculate()">Calculate</button>
+
+<p id="result"></p>
+
+<script>
+function calculate() {
+    let input = document.getElementById("numbers").value;
+    let arr = input.split(",").map(Number);
+
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+
+    let avg = sum / arr.length;
+
+    document.getElementById("result").innerHTML =
+        "Sum = " + sum + "<br>Average = " + avg;
+}
+</script>
+
+</body>
+</html>
