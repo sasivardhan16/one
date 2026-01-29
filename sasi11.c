@@ -14,7 +14,7 @@ int main()
     }
 
     max = a[0];
-    min = a[0];
+    min = a[1];
 
     for(i = 1; i < n; i++)
     {
